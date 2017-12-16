@@ -1,17 +1,80 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://img/knight1.png" type="Texture" id=2]
+[ext_resource path="res://Player/png/Idle (1).png" type="Texture" id=2]
+[ext_resource path="res://Player/png/Idle (2).png" type="Texture" id=3]
+[ext_resource path="res://Player/png/Idle (3).png" type="Texture" id=4]
+[ext_resource path="res://Player/png/Idle (4).png" type="Texture" id=5]
+[ext_resource path="res://Player/png/Idle (5).png" type="Texture" id=6]
+[ext_resource path="res://Player/png/Idle (6).png" type="Texture" id=7]
+[ext_resource path="res://Player/png/Idle (7).png" type="Texture" id=8]
+[ext_resource path="res://Player/png/Idle (8).png" type="Texture" id=9]
+[ext_resource path="res://Player/png/Idle (9).png" type="Texture" id=10]
+[ext_resource path="res://Player/png/Idle (10).png" type="Texture" id=11]
+[ext_resource path="res://Player/png/Walk (1).png" type="Texture" id=12]
+[ext_resource path="res://Player/png/Walk (2).png" type="Texture" id=13]
+[ext_resource path="res://Player/png/Walk (3).png" type="Texture" id=14]
+[ext_resource path="res://Player/png/Walk (4).png" type="Texture" id=15]
+[ext_resource path="res://Player/png/Walk (5).png" type="Texture" id=16]
+[ext_resource path="res://Player/png/Walk (6).png" type="Texture" id=17]
+[ext_resource path="res://Player/png/Walk (7).png" type="Texture" id=18]
+[ext_resource path="res://Player/png/Walk (8).png" type="Texture" id=19]
+[ext_resource path="res://Player/png/Walk (9).png" type="Texture" id=20]
+[ext_resource path="res://Player/png/Walk (10).png" type="Texture" id=21]
+[ext_resource path="res://Player/png/Attack (1).png" type="Texture" id=22]
+[ext_resource path="res://Player/png/Attack (2).png" type="Texture" id=23]
+[ext_resource path="res://Player/png/Attack (3).png" type="Texture" id=24]
+[ext_resource path="res://Player/png/Attack (4).png" type="Texture" id=25]
+[ext_resource path="res://Player/png/Attack (5).png" type="Texture" id=26]
+[ext_resource path="res://Player/png/Attack (6).png" type="Texture" id=27]
+[ext_resource path="res://Player/png/Attack (7).png" type="Texture" id=28]
+[ext_resource path="res://Player/png/Attack (8).png" type="Texture" id=29]
+[ext_resource path="res://Player/png/Attack (9).png" type="Texture" id=30]
+[ext_resource path="res://Player/png/Attack (10).png" type="Texture" id=31]
+[ext_resource path="res://Player/png/Jump (1).png" type="Texture" id=32]
+[ext_resource path="res://Player/png/Jump (2).png" type="Texture" id=33]
+[ext_resource path="res://Player/png/Jump (3).png" type="Texture" id=34]
+[ext_resource path="res://Player/png/Jump (4).png" type="Texture" id=35]
+[ext_resource path="res://Player/png/Jump (5).png" type="Texture" id=36]
+[ext_resource path="res://Player/png/Jump (6).png" type="Texture" id=37]
+[ext_resource path="res://Player/png/Jump (7).png" type="Texture" id=38]
+[ext_resource path="res://Player/png/Jump (8).png" type="Texture" id=39]
+[ext_resource path="res://Player/png/Jump (9).png" type="Texture" id=40]
+[ext_resource path="res://Player/png/Jump (10).png" type="Texture" id=41]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 74.0501, 62.3678 )
+extents = Vector2( 21.9808, 40.3204 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="SpriteFrames" id=2]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ) ],
+"loop": false,
+"name": "Jump",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 72.756, 2.19098 )
+extents = Vector2( 25.1986, 2.19098 )
 
 [node name="Player" type="RigidBody2D"]
 
@@ -23,7 +86,7 @@ mode = 2
 mass = 1.0
 friction = 1.0
 bounce = 0.0
-gravity_scale = 10.0
+gravity_scale = 20.0
 custom_integrator = false
 continuous_cd = 0
 contacts_reported = 0
@@ -59,17 +122,22 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
-[node name="Sprite" type="Sprite" parent="."]
-
-texture = ExtResource( 2 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-position = Vector2( -11.0002, 16.1767 )
+position = Vector2( -15.9475, 11.3299 )
 shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+
+position = Vector2( -10.0376, 5.73578 )
+scale = Vector2( 0.15, 0.15 )
+frames = SubResource( 2 )
+animation = "Attack"
+frame = 4
 
 [node name="ground_check" type="Area2D" parent="."]
 
+position = Vector2( -188.151, 4.07251 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -80,8 +148,8 @@ audio_bus_name = "Master"
 
 [node name="ground_collision" type="CollisionShape2D" parent="ground_check"]
 
-position = Vector2( -11.6122, 80.0526 )
-shape = SubResource( 2 )
+position = Vector2( 171.504, 49.6726 )
+shape = SubResource( 3 )
 
 [connection signal="body_entered" from="ground_check" to="." method="_on_ground_check_body_entered"]
 

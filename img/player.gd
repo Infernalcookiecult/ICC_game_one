@@ -45,7 +45,6 @@ func _physics_process(delta):
 	if jump_count > 0 && Input.is_action_just_pressed("ui_up"):
 		velocity.y = 0
 		velocity.y -= JUMP_FORCE
-		jump_count -= 1
 	
 		
 	
