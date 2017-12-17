@@ -1,11 +1,26 @@
-[gd_resource type="TileSet" load_steps=3 format=2]
+[gd_resource type="TileSet" load_steps=6 format=2]
 
 [ext_resource path="res://img/trees_plants_rocks.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 95.0152, 12.5572 )
+extents = Vector2( 37.5699, 37.5044 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -51.6315, -36.7275, -43.9734, -43.7831, 39.9911, -26.9583, 60.7772, 41.6978, 16.4701, 40.8837, -54.64, 39.2555, -60.657, 30.3004 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 45.1877, -43.7831, 52.2987, -31.5715, 39.9911, -26.9583, -43.9734, -43.7831 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.0088, 17.4996 )
 
 [resource]
 
@@ -13,14 +28,47 @@ extents = Vector2( 95.0152, 12.5572 )
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 390, 190, 25 )
+0/region = Rect2( 115, 385, 75, 75 )
 0/is_autotile = false
-0/occluder_offset = Vector2( 95, 12.5 )
-0/navigation_offset = Vector2( 95, 12.5 )
+0/occluder_offset = Vector2( 37.5, 37.5 )
+0/navigation_offset = Vector2( 37.5, 37.5 )
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "shape": SubResource( 1 ),
-"shape_transform": Transform2D( 1, 0, 0, 1, 95, 12.5 )
+"shape_transform": Transform2D( 1, 0, 0, 1, 37.5, 37.5 )
+} ]
+1/name = "stonearch"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 160, 125, 95 )
+1/is_autotile = false
+1/occluder_offset = Vector2( 62.5, 47.5 )
+1/navigation_offset = Vector2( 62.5, 47.5 )
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 62.5, 47.5 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 62.5, 47.5 )
+} ]
+2/name = "ground3"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 96, 385, 70, 35 )
+2/is_autotile = false
+2/occluder_offset = Vector2( 35, 17.5 )
+2/navigation_offset = Vector2( 35, 17.5 )
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 35, 17.5 )
 } ]
 
