@@ -1,17 +1,18 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://img/trees_plants_rocks.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 95.0152, 12.5572 )
+extents = Vector2( 37.5699, 37.5044 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+custom_solver_bias = 0.0
+extents = Vector2( 35.0088, 17.4996 )
 
 [node name="Node2D" type="Node2D"]
-
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="ground" type="Sprite" parent="."]
 
@@ -19,7 +20,10 @@ position = Vector2( 261.323, 266.802 )
 scale = Vector2( 1.01422, 1.02219 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 0, 390, 190, 25 )
+region_rect = Rect2( 115, 385, 75, 75 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="ground"]
 
@@ -34,5 +38,56 @@ bounce = 0.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ground/StaticBody2D"]
 
 shape = SubResource( 1 )
+
+[node name="stonearch" type="Sprite" parent="."]
+
+position = Vector2( 480, 230 )
+scale = Vector2( 1.01422, 1.02219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 0, 160, 125, 95 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="stonearch"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="stonearch/StaticBody2D"]
+
+build_mode = 0
+polygon = PoolVector2Array( -54.64, 39.2555, -60.657, 30.3004, -51.6315, -36.7275, -43.9734, -43.7831, 45.1877, -43.7831, 52.2987, -31.5715, 39.9911, -26.9583, 60.7772, 41.6978, 16.4701, 40.8837 )
+
+[node name="ground3" type="Sprite" parent="."]
+
+position = Vector2( 300, 170 )
+scale = Vector2( 1.01422, 1.02219 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 96, 385, 70, 35 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ground3"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground3/StaticBody2D"]
+
+shape = SubResource( 2 )
 
 
