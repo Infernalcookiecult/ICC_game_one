@@ -4,11 +4,14 @@ extends RigidBody2D
 var acceleration = 10000
 var top_move_speed = 200
 var top_jump_speed = 400
-var hit_points = 3
+var hit_points = 10
 var damage = 1
+
  
 # Movement Vars
 var directional_force = Vector2()
+
+
 const DIRECTION = {
 	ZERO = Vector2(0, 0),
 	LEFT = Vector2(-1, 0),

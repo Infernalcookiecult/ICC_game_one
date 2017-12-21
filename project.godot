@@ -10,8 +10,7 @@ config_version=3
 
 [application]
 
-config/name="godot_game_one"
-run/main_scene="res://img/main.tscn"
+config/name="New Game Project"
 config/icon="res://icon.png"
 
 [gdnative]

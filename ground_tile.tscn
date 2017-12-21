@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="Node2D" type="Node2D"]
+
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+
+
