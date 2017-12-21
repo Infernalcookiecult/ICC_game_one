@@ -1,0 +1,14 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/happy_adveture.ogg-37c2c21b34667df6d01b6fa602d9518e.oggstr"
+
+[deps]
+
+source_md5="c72a7f05e7b08058de2a9330b89494bc"
+
+[params]
+
+loop=true
+loop_offset=0
